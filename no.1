@@ -1,0 +1,273 @@
+(2/2) QueryException
+SQLSTATE[HY000] [1045] Access denied for user 'Yumiko-Takehara'@'localhost' (using password: YES) (SQL: select * from `users` where `email` = chaomin0122@gmail.com limit 1)
+
+in Connection.php line 647
+at Connection->runQueryCallback('select * from `users` where `email` = ? limit 1', array('chaomin0122@gmail.com'), object(Closure))
+in Connection.php line 607
+at Connection->run('select * from `users` where `email` = ? limit 1', array('chaomin0122@gmail.com'), object(Closure))
+in Connection.php line 326
+at Connection->select('select * from `users` where `email` = ? limit 1', array('chaomin0122@gmail.com'), true)
+in Builder.php line 1705
+at Builder->runSelect()
+in Builder.php line 1690
+at Builder->get(array('*'))
+in Builder.php line 462
+at Builder->getModels(array('*'))
+in Builder.php line 446
+at Builder->get(array('*'))
+in BuildsQueries.php line 75
+at Builder->first()
+in EloquentUserProvider.php line 114
+at EloquentUserProvider->retrieveByCredentials(array('email' => 'chaomin0122@gmail.com', 'password' => 'peru5768'))
+in SessionGuard.php line 352
+at SessionGuard->attempt(array('email' => 'chaomin0122@gmail.com', 'password' => 'peru5768'), false)
+in AuthenticatesUsers.php line 76
+at LoginController->attemptLogin(object(Request))
+in AuthenticatesUsers.php line 41
+at LoginController->login(object(Request))
+at call_user_func_array(array(object(LoginController), 'login'), array(object(Request)))
+in Controller.php line 55
+at Controller->callAction('login', array(object(Request)))
+in ControllerDispatcher.php line 44
+at ControllerDispatcher->dispatch(object(Route), object(LoginController), 'login')
+in Route.php line 203
+at Route->runController()
+in Route.php line 160
+at Route->run()
+in Router.php line 572
+at Router->Illuminate\Routing\{closure}(object(Request))
+in Pipeline.php line 30
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in RedirectIfAuthenticated.php line 24
+at RedirectIfAuthenticated->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in SubstituteBindings.php line 41
+at SubstituteBindings->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in VerifyCsrfToken.php line 65
+at VerifyCsrfToken->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in ShareErrorsFromSession.php line 49
+at ShareErrorsFromSession->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in StartSession.php line 64
+at StartSession->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in AddQueuedCookiesToResponse.php line 37
+at AddQueuedCookiesToResponse->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in EncryptCookies.php line 59
+at EncryptCookies->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in Pipeline.php line 102
+at Pipeline->then(object(Closure))
+in Router.php line 574
+at Router->runRouteWithinStack(object(Route), object(Request))
+in Router.php line 533
+at Router->dispatchToRoute(object(Request))
+in Router.php line 511
+at Router->dispatch(object(Request))
+in Kernel.php line 176
+at Kernel->Illuminate\Foundation\Http\{closure}(object(Request))
+in Pipeline.php line 30
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in TransformsRequest.php line 30
+at TransformsRequest->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in TransformsRequest.php line 30
+at TransformsRequest->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in ValidatePostSize.php line 27
+at ValidatePostSize->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in CheckForMaintenanceMode.php line 46
+at CheckForMaintenanceMode->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in Pipeline.php line 102
+at Pipeline->then(object(Closure))
+in Kernel.php line 151
+at Kernel->sendRequestThroughRouter(object(Request))
+in Kernel.php line 116
+at Kernel->handle(object(Request))
+in index.php line 53
+at require_once('/home/ec2-user/environment/mynews/public/index.php')
+in server.php line 21
+(1/2) PDOException
+SQLSTATE[HY000] [1045] Access denied for user 'Yumiko-Takehara'@'localhost' (using password: YES)
+
+in Connector.php line 68
+at PDO->__construct('mysql:host=127.0.0.1;port=3306;dbname=mynews', 'Yumiko-Takehara', 'peru5768', array(0, 2, 0, false, false))
+in Connector.php line 68
+at Connector->createPdoConnection('mysql:host=127.0.0.1;port=3306;dbname=mynews', 'Yumiko-Takehara', 'peru5768', array(0, 2, 0, false, false))
+in Connector.php line 44
+at Connector->createConnection('mysql:host=127.0.0.1;port=3306;dbname=mynews', array('driver' => 'mysql', 'host' => '127.0.0.1', 'port' => '3306', 'database' => 'mynews', 'username' => 'Yumiko-Takehara', 'password' => 'peru5768', 'unix_socket' => '', 'charset' => 'utf8mb4', 'collation' => 'utf8mb4_unicode_ci', 'prefix' => '', 'strict' => true, 'engine' => null, 'name' => 'mysql'), array(0, 2, 0, false, false))
+in MySqlConnector.php line 24
+at MySqlConnector->connect(array('driver' => 'mysql', 'host' => '127.0.0.1', 'port' => '3306', 'database' => 'mynews', 'username' => 'Yumiko-Takehara', 'password' => 'peru5768', 'unix_socket' => '', 'charset' => 'utf8mb4', 'collation' => 'utf8mb4_unicode_ci', 'prefix' => '', 'strict' => true, 'engine' => null, 'name' => 'mysql'))
+in ConnectionFactory.php line 183
+at ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+at call_user_func(object(Closure))
+in Connection.php line 883
+at Connection->getPdo()
+in Connection.php line 904
+at Connection->getReadPdo()
+in Connection.php line 392
+at Connection->getPdoForSelect(true)
+in Connection.php line 318
+at Connection->Illuminate\Database\{closure}('select * from `users` where `email` = ? limit 1', array('chaomin0122@gmail.com'))
+in Connection.php line 640
+at Connection->runQueryCallback('select * from `users` where `email` = ? limit 1', array('chaomin0122@gmail.com'), object(Closure))
+in Connection.php line 607
+at Connection->run('select * from `users` where `email` = ? limit 1', array('chaomin0122@gmail.com'), object(Closure))
+in Connection.php line 326
+at Connection->select('select * from `users` where `email` = ? limit 1', array('chaomin0122@gmail.com'), true)
+in Builder.php line 1705
+at Builder->runSelect()
+in Builder.php line 1690
+at Builder->get(array('*'))
+in Builder.php line 462
+at Builder->getModels(array('*'))
+in Builder.php line 446
+at Builder->get(array('*'))
+in BuildsQueries.php line 75
+at Builder->first()
+in EloquentUserProvider.php line 114
+at EloquentUserProvider->retrieveByCredentials(array('email' => 'chaomin0122@gmail.com', 'password' => 'peru5768'))
+in SessionGuard.php line 352
+at SessionGuard->attempt(array('email' => 'chaomin0122@gmail.com', 'password' => 'peru5768'), false)
+in AuthenticatesUsers.php line 76
+at LoginController->attemptLogin(object(Request))
+in AuthenticatesUsers.php line 41
+at LoginController->login(object(Request))
+at call_user_func_array(array(object(LoginController), 'login'), array(object(Request)))
+in Controller.php line 55
+at Controller->callAction('login', array(object(Request)))
+in ControllerDispatcher.php line 44
+at ControllerDispatcher->dispatch(object(Route), object(LoginController), 'login')
+in Route.php line 203
+at Route->runController()
+in Route.php line 160
+at Route->run()
+in Router.php line 572
+at Router->Illuminate\Routing\{closure}(object(Request))
+in Pipeline.php line 30
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in RedirectIfAuthenticated.php line 24
+at RedirectIfAuthenticated->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in SubstituteBindings.php line 41
+at SubstituteBindings->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in VerifyCsrfToken.php line 65
+at VerifyCsrfToken->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in ShareErrorsFromSession.php line 49
+at ShareErrorsFromSession->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in StartSession.php line 64
+at StartSession->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in AddQueuedCookiesToResponse.php line 37
+at AddQueuedCookiesToResponse->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in EncryptCookies.php line 59
+at EncryptCookies->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in Pipeline.php line 102
+at Pipeline->then(object(Closure))
+in Router.php line 574
+at Router->runRouteWithinStack(object(Route), object(Request))
+in Router.php line 533
+at Router->dispatchToRoute(object(Request))
+in Router.php line 511
+at Router->dispatch(object(Request))
+in Kernel.php line 176
+at Kernel->Illuminate\Foundation\Http\{closure}(object(Request))
+in Pipeline.php line 30
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in TransformsRequest.php line 30
+at TransformsRequest->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in TransformsRequest.php line 30
+at TransformsRequest->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in ValidatePostSize.php line 27
+at ValidatePostSize->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in CheckForMaintenanceMode.php line 46
+at CheckForMaintenanceMode->handle(object(Request), object(Closure))
+in Pipeline.php line 148
+at Pipeline->Illuminate\Pipeline\{closure}(object(Request))
+in Pipeline.php line 53
+at Pipeline->Illuminate\Routing\{closure}(object(Request))
+in Pipeline.php line 102
+at Pipeline->then(object(Closure))
+in Kernel.php line 151
+at Kernel->sendRequestThroughRouter(object(Request))
+in Kernel.php line 116
+at Kernel->handle(object(Request))
+in index.php line 53
+at require_once('/home/ec2-user/environment/mynews/public/index.php')
+in server.php line 21
